@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
 
-    <TextView
+    //이미지 변경을 위한 버튼
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:text="이미지 바꾸어 보여주기"
+        android:onClick="OnBtn1Clicked"
+        />
+    //수평스크롤을 위한 스크롤 뷰
+    <HorizontalScrollView
+        android:id="@+id/horScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        //수직 스크롤을 위한 스크롤뷰
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            //이미지를 보여주는 이미지뷰
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                />
+
+        </ScrollView>
+    </HorizontalScrollView>
+</LinearLayout>
