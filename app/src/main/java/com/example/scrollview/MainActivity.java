@@ -58,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
         imageView.getLayoutParams().height = bitmapHeight;
     }
 
+    public void OnBtn2Clicked(View v){
+
+
+    }
+
 
 }
